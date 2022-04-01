@@ -1,22 +1,11 @@
 name: Release Drafter
 
 on:
-  page_build
+  page_build:
   deployment:
   check_run:
     types: [rerequested, completed]
   workflow_dispatch:
-  push:
-    # branches to consider in the event; optional, defaults to all
-    branches:
-      - master
-  # pull_request event is required only for autolabeler
-  pull_request:
-    branches:
-    - main
-  # pull_request_target event is required for autolabeler to support PRs from forks
-  # pull_request_target:
-    # types: [opened, reopened, synchronize]
 
 jobs:
   update_release_draft:
