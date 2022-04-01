@@ -1,6 +1,7 @@
 name: Release Drafter
 
 on:
+  page_build
   deployment:
   check_run:
     types: [rerequested, completed]
